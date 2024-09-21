@@ -7,6 +7,7 @@
     LineLayer,
   } from "svelte-maplibre";
   import { fade } from "svelte/transition";
+  import logo from "$lib/images/icon.png";
 
   let mapClasses = "";
   let markers = [
@@ -129,7 +130,8 @@
 
 {#if showSplash}
   <div class="splash" transition:fade={{ delay: 250, duration: 300 }}>
-    <h1>Loading...</h1>
+    <img src={logo} alt="logo" />
+    <h1>Cycle Guard</h1>
   </div>
 {/if}
 
@@ -174,5 +176,13 @@
     justify-content: center;
     align-items: center;
     z-index: 999;
+    flex-direction: column;
+  }
+
+  .splash h1 {
+    font-size: 3rem;
+    color: #586f7c;
+    font-weight: bold;
+    margin-top: 1em;
   }
 </style>
