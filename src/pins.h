@@ -10,6 +10,7 @@
 #define MPU_SCL 22
 
 // Laser
+#define LASER_PIN 19
 
 // Ultrasonic - HCSR04
 #define HCSR_TRIGGER 2
