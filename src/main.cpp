@@ -3,6 +3,7 @@
 
 // globals
 float ultrasonicDistanceCm;
+float mpuAngle;
 
 // setup + loop
 
@@ -11,6 +12,7 @@ void setup() {
   mpuSetup();
   setupLaser();
   setupMotor();
+  setupWebsocket();
 }
 
 void loop() {
@@ -20,4 +22,5 @@ void loop() {
   // output
   loopLaser();
   loopMotor();
+  loopWebsockets();
 }
