@@ -4,8 +4,8 @@
 #include "pins.h"
 #include "Arduino.h"
 
-void setupMPU();
-void loopMPU();
+void mpuSetup();
+void mpuMeasure();
 #define MPU_PERIOD_MS 25
 
 void loopHCSR();

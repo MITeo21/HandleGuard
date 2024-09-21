@@ -3,10 +3,10 @@
 
 void setup() {
   Serial.begin(115200);
-  setupMPU();
+  mpuSetup();
 }
 
 void loop() {
-  loopMPU();
+  mpuMeasure();
   loopHCSR();
 }
