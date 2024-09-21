@@ -30,6 +30,8 @@ void sendWebsocketData(const String& data) {
 
 void setupWebsocket() {
   WiFi.begin(ssid, password);
+  WiFi.setTxPower(WIFI_POWER_8_5dBm);
+
   while (WiFi.status() != WL_CONNECTED) {
     delay(1000);
     Serial.println("Connecting to WiFi...");
