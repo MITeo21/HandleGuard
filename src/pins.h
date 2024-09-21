@@ -4,17 +4,15 @@
 // PINS
 
 // Motor
-#define MOTOR_PIN 3
+#define MOTOR_PIN 9
 
 // IMU - MPU9250
-#define MPU_SDA 21
-#define MPU_SCL 22
 
 // Laser
-#define LASER_PIN 19
+#define LASER_PIN 0
 
 // Ultrasonic - HCSR04
-#define HCSR_TRIGGER 2
-#define HCSR_ECHO 4
+#define HCSR_TRIGGER 8
+#define HCSR_ECHO 7
 
 #endif
