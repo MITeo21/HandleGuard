@@ -9,11 +9,11 @@ float ultrasonicDistanceCm;
 void setup() {
   Serial.begin(115200);
   // setupMPU();
+  setupLaser();
 }
 
 void loop() {
   // loopMPU();
   loopHCSR();
-  Serial.println(ultrasonicDistanceCm);
   loopLaser();
 }

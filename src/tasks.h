@@ -13,6 +13,7 @@ void loopMPU();
 
 // Laser
 #define DANGER_DISTANCE 30
+void setupLaser();
 void loopLaser();
 
 // Ultrasonic - HCSR04
