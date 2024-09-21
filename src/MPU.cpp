@@ -25,18 +25,20 @@
  * MPU6500_WE myMPU6500 = MPU6500_WE(&wire2, MPU6500_ADDR) -> all together
  * Successfully tested with two I2C busses on an ESP32
  */
-MPU6500_WE myMPU6500 = MPU6500_WE(MPU6500_ADDR);
+MPU6500_WE myMPU6500 = MPU6500_WE(&Wire,MPU6500_ADDR);
 
 extern float mpuAngle;
 
 void mpuSetup() {
-  Wire.begin();
-  if(!myMPU6500.init()){
-    Serial.println("MPU6500 does not respond");
+  bool var = Wire.begin(10,20); //defined with sdapin and sclpin
+  //for debug 
+  if(var) Serial.println("I2C connected");
+  else  Serial.println("I2C not connected");
+  while(!myMPU6500.init()){
+    Serial.println(var);
+    Serial.println("Waiting for MPU6500");
   }
-  else{
-    Serial.println("MPU6500 is connected");
-  }
+  Serial.println("MPU6500 is connected");
   
   /* The slope of the curve of acceleration vs measured values fits quite well to the theoretical 
    * values, e.g. 16384 units/g in the +/- 2g range. But the starting point, if you position the 

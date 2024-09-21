@@ -3,7 +3,7 @@
 
 // globals
 float ultrasonicDistanceCm;
-float mpuAngle;
+float mpuAngle = 0;
 
 // setup + loop
 
@@ -23,4 +23,8 @@ void loop() {
   loopLaser();
   loopMotor();
   loopWebsockets();
+
+  if (ultrasonicDistanceCm < 5) {
+    digitalWrite(MOTOR_PIN,HIGH);
+  }
 }

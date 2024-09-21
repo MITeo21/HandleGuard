@@ -39,9 +39,9 @@ void setupWebsocket() {
 
   Serial.println(WiFi.localIP());
 
+
   server.begin();
   ws.onEvent(onWebSocketEvent);
-
   server.addHandler(&ws);
   server.begin();
 }

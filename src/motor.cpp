@@ -28,13 +28,13 @@ void loopMotor() {
     if (millis() > prev_ms + MOTOR_PERIOD_MS) {
         switch (hapticState) {
             case HAPTIC_ON:
-                analogWrite(MOTOR_PIN, HIGH);
+                digitalWrite(MOTOR_PIN, HIGH);
                 if (millis() - hapticStart > hapticTime) {
                     hapticState = HAPTIC_OFF;
                 }
                 break;
             case HAPTIC_OFF:
-                analogWrite(MOTOR_PIN, LOW);
+                digitalWrite(MOTOR_PIN, LOW);
                 break;
             default:
                 Serial.println("Haptic Error");
