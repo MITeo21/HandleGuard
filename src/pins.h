@@ -6,8 +6,8 @@
 // Motor
 
 // IMU
-#define MPU_SDA 22
-#define MPU_SCL 21
+#define MPU_SDA 21
+#define MPU_SCL 22
 
 // Laser
 
