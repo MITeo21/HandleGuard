@@ -8,8 +8,8 @@
 
 // IMU - MPU9250
 #define MPU_PERIOD_MS 25
-void setupMPU();
-void loopMPU();
+void mpuSetup();
+void mpuMeasure();
 
 // Laser
 #define DANGER_DISTANCE 30
