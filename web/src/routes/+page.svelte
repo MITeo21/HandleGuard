@@ -105,7 +105,7 @@
   {#each markers as { lngLat, name }}
     <!-- Unlike the custom marker example, default markers do not have mouse events,
     and popups only support the default openOn="click" behavior -->
-    <DefaultMarker {lngLat} draggable>
+    <DefaultMarker {lngLat}>
       <Popup offset={[0, -10]}>
         <div class="text-lg font-bold">{name}</div>
       </Popup>
@@ -157,7 +157,7 @@
     height: 0;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-top: 20px solid #586f7c;
+    border-top: 20px solid #5aaf00;
     position: absolute;
     top: 50%;
     left: 50%;
