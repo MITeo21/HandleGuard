@@ -27,7 +27,7 @@ void setupMPU() {
 void loopMPU() {
     if (mpu.update()) {
         static uint32_t prev_ms = millis();
-        if (millis() > prev_ms + 25) {
+        if (millis() > prev_ms + MPU_PERIOD_MS) {
             print_roll_pitch_yaw();
             prev_ms = millis();
         }
