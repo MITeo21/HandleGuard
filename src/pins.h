@@ -4,6 +4,7 @@
 // PINS
 
 // Motor
+#define MOTOR_PIN 3
 
 // IMU - MPU9250
 #define MPU_SDA 21

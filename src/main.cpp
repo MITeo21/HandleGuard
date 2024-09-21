@@ -10,10 +10,14 @@ void setup() {
   Serial.begin(115200);
   mpuSetup();
   setupLaser();
+  setupMotor();
 }
 
 void loop() {
+  // input
   mpuMeasure();
   loopHCSR();
+  // output
   loopLaser();
+  loopMotor();
 }

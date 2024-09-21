@@ -5,6 +5,11 @@
 #include "Arduino.h"
 
 // Motor
+#define MOTOR_PERIOD_MS 50
+void setupMotor();
+void loopMotor();
+void turnOnMotor();
+void turnOff Motor();
 
 // IMU - MPU9250
 #define MPU_PERIOD_MS 25
