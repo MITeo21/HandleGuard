@@ -27,6 +27,8 @@
  */
 MPU6500_WE myMPU6500 = MPU6500_WE(MPU6500_ADDR);
 
+extern float mpuAngle;
+
 void mpuSetup() {
   Wire.begin();
   if(!myMPU6500.init()){
@@ -152,24 +154,26 @@ void mpuMeasure() {
   float temp = myMPU6500.getTemperature();
   float resultantG = myMPU6500.getResultantG(gValue);
 
-  Serial.println("Acceleration in g (x,y,z):");
-  Serial.print(gValue.x);
-  Serial.print("   ");
-  Serial.print(gValue.y);
-  Serial.print("   ");
-  Serial.println(gValue.z);
-  Serial.print("Resultant g: ");
-  Serial.println(resultantG);
+  mpuAngle = gyr.x;
 
-  Serial.println("Gyroscope data in degrees/s: ");
-  Serial.print(gyr.x);
-  Serial.print("   ");
-  Serial.print(gyr.y);
-  Serial.print("   ");
-  Serial.println(gyr.z);
+  // Serial.println("Acceleration in g (x,y,z):");
+  // Serial.print(gValue.x);
+  // Serial.print("   ");
+  // Serial.print(gValue.y);
+  // Serial.print("   ");
+  // Serial.println(gValue.z);
+  // Serial.print("Resultant g: ");
+  // Serial.println(resultantG);
 
-  Serial.print("Temperature in °C: ");
-  Serial.println(temp);
+  // Serial.println("Gyroscope data in degrees/s: ");
+  // Serial.print(gyr.x);
+  // Serial.print("   ");
+  // Serial.print(gyr.y);
+  // Serial.print("   ");
+  // Serial.println(gyr.z);
 
-  Serial.println("********************************************");
+  // Serial.print("Temperature in °C: ");
+  // Serial.println(temp);
+
+  // Serial.println("********************************************");
 }

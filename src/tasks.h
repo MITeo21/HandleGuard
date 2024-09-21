@@ -20,4 +20,9 @@ void loopLaser();
 #define HCSR_PERIOD_MS 500
 void loopHCSR();
 
+// Communication
+#define WEBSOCKETS_PERIOD_MS 250
+void setupWebsocket();
+void loopWebsockets();
+
 #endif
